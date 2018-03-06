@@ -35,19 +35,12 @@ class FullName
 
 	public String lastNameFirst()
 	{
-		/*
-		 *  80 point precondition: The entered name consists of a First Name and a Last Name seprated by a single space.
-		 *
-		 * 100 point precondition: The entered name consists of a First Name, Last Name and any number of Middle Names.
-		 *                         NOTE: "any number" means it is possible not to have no Middle Name at all.
-		 *                         You can assume the user is not entering any extra spaces.
-		 */
-
-
-
-
-
-
+		int spaceIndex1 = name.indexOf(" ");
+		int spaceIndex2 = name.lastIndexOf(" ");
+		String firstName = name.substring(0, spaceIndex1);
+		String middleName = name.substring(spaceIndex1,spaceIndex2);
+		String lastName = name.substring(spaceIndex2);
+		return lastName+" "+middleName+" "+firstName;
 	}
 }
 
